@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "imageShow(下载图片)",
+    "version": "1.0.0",
+    "description": "一个非常高大上的图片下载插件",
+    "icons": {
+        "16": "01.jpg",
+        "32": "02.jpg",
+        "48": "03.jpg",
+        "128": "04.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*/*"
+            ],
+            "js": [
+                "src/main.js"
+            ]
+        }
+    ],
+    "permissions": [
+        "downloads"
+    ],
+    "background": {
+        "service_worker": "src/service_worker.js"
+    }
+}
